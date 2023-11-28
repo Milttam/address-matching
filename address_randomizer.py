@@ -11,9 +11,7 @@ def scramble_street_name(original_address):
     street address (all uppercase), takes street name field and scrambles some 
     of the letters. Separates the original address into a list and scrambles 
     the address field. Returns full modified address with scrambled letters. 
-    
-    Parameters: 
-    original_address: String
+
     """
     components = original_address.split(",") #Splitting address by commas
     components = components[0].split(" ",1) + components[1:] #Splitting house number
@@ -36,10 +34,6 @@ def random_indexes(field, iteration):
     Given two parameters "field" and "iteration", generates a list of integers
     that represents the indices of characters to scramble in "field". Iteration
     indicates size of the list returned based on the length of String "field".
-    
-    Parameters:
-    field: String
-    iteration: int
     """
     random_index = []
     for i in range(iteration):
@@ -53,9 +47,6 @@ def iterations(field):
     characters in String "field" that should be scrambled. If length of "field"
     is <= 5, returns 1. If length is between 5 and 15, returns 2. If greater
     than 15, returns 3
-    
-    Parameters:
-    field: String
     """
     size = len(field)
     if size <= 5: 
