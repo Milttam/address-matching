@@ -5,7 +5,7 @@ import time
 def geocode_address(address):
     """
     Geocode an address using the Maps.co Geocoding API.
-    See https://geocode.maps.co 
+    See https://geocode.maps.co
     Input: 
       address: A dictionary containing address information with keys:
         - number: Street number
@@ -65,11 +65,11 @@ def geocode_with_delay(address):
 
 # test address
 address = {
-    'number': '62',
-    'street': 'Beaumont Drive',
-    'city': 'Plainview',
+    'number': '225',
+    'street': 'Jessup Road',
+    'city': 'Ithaca',
     'state': 'NY',
-    'zip': '11803',
+    'zip': '14580',
     'country': 'US'
 }
 
