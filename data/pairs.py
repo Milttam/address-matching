@@ -12,7 +12,7 @@ def make_entries():
     df = pd.DataFrame(columns=['address1', 'address2', 'label'])
 
     # open addresses json file
-    with open('addresses_data.json') as f:
+    with open("data/addresses_data.json") as f:
         addresses = json.load(f)
     addresses = addresses["res"]
 
@@ -62,4 +62,4 @@ def case4(addresses):
     return df
 
 
-print(make_entries())
+# print(make_entries())

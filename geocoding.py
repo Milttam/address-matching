@@ -53,7 +53,7 @@ def geocode_address(address):
 # Function to limit requests to one every 0.5 seconds
 
 
-def geocode_with_delay(address):
+def geocode(address):
     coordinates = geocode_address(address)
 
     if coordinates:
@@ -61,6 +61,7 @@ def geocode_with_delay(address):
 
     # delay .5 seconds before returning to account for API rate limits
     time.sleep(0.5)
+    return coordinates
 
 
 # test address
@@ -74,4 +75,4 @@ address = {
 }
 
 # test function call
-geocode_with_delay(address)
+# geocode(address)
