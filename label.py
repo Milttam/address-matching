@@ -1,4 +1,5 @@
 import usaddress
+import json
 # example addresses
 address_a = '136 Hoy Rd, Ithaca, NY 14850'
 address_b = '401 Cayuga Park Ln Suite 101, Ithaca, NY 14850'
@@ -31,6 +32,8 @@ example2 = usaddress.tag('Cayuga Medical Center ' +
 
 # Make an expanded mapping with more features in the future
 
-
-print(usaddress.tag("62 Main Street Suite 4b, New Paltz, NY 12561",
-      tag_mapping=address_map_dict))
+# pretty print an example
+add = "62 Main Street Suite 4b, New Paltz, NY 12561"
+od = usaddress.tag(add, tag_mapping=address_map_dict)
+print("\nOriginal Address:" + add + "\n")
+print(json.dumps(od, indent=4))
